@@ -1,52 +1,50 @@
-# React + TypeScript + Vite
+# iSpeakAnglo - English Courses Landing Page 🌐
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**A modern landing page built with React, TypeScript, and Vite.**  
+**Deployed on Vercel:** [iSpeakAnglo](https://ispeakanglo.vercel.app)  
 
-Currently, two official plugins are available:
+This landing page seamlessly integrates form submissions with a Google Sheet for efficient data management.  
+Check out the sheet: [Google Sheet Link](https://docs.google.com/spreadsheets/d/1MqjnSELucZI-DMGa30dbmY0JLZPtUOzkRTiwahsjlks/edit?usp=sharing).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. **Smart Form Handling**  
+   - **Uncompleted forms**: Automatically moved to a separate sheet tab after 20 seconds of inactivity.  
+   - **Follow-up emails**: If the user hasn't completed the form within 2 minutes, an email is sent as a reminder.  
 
-- Configure the top-level `parserOptions` property like this:
+2. **Dynamic Updates**  
+   - The **Returned** column in the sheet is updated to `"Yes"` every hour if the user completes their registration after initially leaving.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+3. **Automation Integration**  
+   - All backend tasks, including data handling and email automation, are powered by **Pabbly Connect**.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+---
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## 🛠️ Tech Stack
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
-"# landingPage_edP" 
-"# landingPage_edP" 
+- **Frontend**: React, TypeScript, Vite, Tailwind CSS, PageUI  
+- **Deployment**: Vercel  
+- **Backend Automation**: Pabbly Connect  
+
+---
+
+## 🚀 How It Works
+
+1. **User Interaction**  
+   - Users fill out the form on the landing page.
+
+2. **Google Sheet Sync**  
+   - Form submissions are logged in a connected Google Sheet.
+
+3. **Automated Actions**  
+   - Unfinished forms are tracked and followed up automatically.
+
+---
+
+## 🔗 Live Demo
+
+Explore the live site: [iSpeakAnglo](https://ispeakanglo.vercel.app)  
+
+For any feedback or contributions, feel free to open an issue or create a pull request!
